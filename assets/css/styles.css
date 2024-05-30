@@ -629,10 +629,9 @@ header {
 }
 
 /* Image inside the certification content */
-/* Image inside the certification content */
 .certifications__image {
-  width: 100%; /* Occupy 100% of the container's width */
-  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  max-width: 100%; /* Occupy 100% of the container's width */
+  max-height: 100%; /* Occupy 100% of the container's height */
   object-fit: contain; /* Fit the entire image inside the container */
   border-radius: 0.25rem;
 }
