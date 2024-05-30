@@ -629,12 +629,14 @@ header {
 }
 
 /* Image inside the certification content */
+/* Image inside the certification content */
 .certifications__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container nicely */
-  border-radius: 0.25rem 0.25rem 0 0; /* Rounded corners on the top */
+  width: 100%; /* Occupy 100% of the container's width */
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  object-fit: contain; /* Fit the entire image inside the container */
+  border-radius: 0.25rem;
 }
+
 
 /* Name of the certification below the image */
 .certifications__name {
