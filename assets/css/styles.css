@@ -600,7 +600,7 @@ header {
   color: var(--first-color);
 }
 
-/*==================== SERVICES ====================*/
+/*==================== CERTIFICATION ====================*/
 /* Container for the certifications section with a gap and grid layout */
 .certifications__container {
   display: grid;
@@ -643,12 +643,88 @@ header {
   text-align: center;
 }
 
-/* Specific styles for the certifications section */
-.certifications__container {
-  gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+/* Button inside the certification content */
+.certifications__button {
+  cursor: pointer;
+  font-size: var(--small-font-size);
 }
 
+/* Hover effect for button icon */
+.certifications__button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+
+/* Modal styling */
+.certifications__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transform: 0.3s;
+}
+
+/* Content area inside the modal */
+.certifications__modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* List of services inside the modal */
+.certifications__modal-services {
+  row-gap: 1rem;
+}
+
+/* Individual service item inside the modal */
+.certifications__modal-service {
+  display: flex;
+}
+
+/* Title inside the modal */
+.certifications__modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+/* Close button for the modal */
+.certifications__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+/* Icon inside the modal service item */
+.certifications__modal-icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+}
+
+/* Styles for when the modal is active */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Disable scroll on the main page when the modal is active */
+.disable-scroll {
+  overflow: hidden;
+}
+
+/*==================== SERVICES ====================*/
 
 .services__container {
   gap: 1.5rem;
