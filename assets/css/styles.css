@@ -601,6 +601,54 @@ header {
 }
 
 /*==================== SERVICES ====================*/
+/* Container for the certifications section with a gap and grid layout */
+.certifications__container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Main content area for each certification item */
+.certifications__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.certifications__content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image inside the certification content */
+.certifications__image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  object-fit: cover; /* Ensure the image covers the container nicely */
+}
+
+/* Name of the certification below the image */
+.certifications__name {
+  font-size: var(--small-font-size);
+  margin-top: 0.5rem;
+  font-weight: var(--font-medium);
+  text-align: center;
+}
+
+/* Specific styles for the certifications section */
+.certifications__container {
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 
 .services__container {
   gap: 1.5rem;
