@@ -612,15 +612,16 @@ header {
 .certifications__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   background-color: var(--container-color);
-  padding: 1rem;
+  padding: 0;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
   overflow: hidden; /* Ensure the image doesn't overflow the container */
+  height: 300px; /* Fixed height for certification cards */
 }
 
 .certifications__content:hover {
@@ -630,9 +631,9 @@ header {
 /* Image inside the certification content */
 .certifications__image {
   width: 100%;
-  height: auto;
-  border-radius: 0.25rem;
+  height: 100%;
   object-fit: cover; /* Ensure the image covers the container nicely */
+  border-radius: 0.25rem 0.25rem 0 0; /* Rounded corners on the top */
 }
 
 /* Name of the certification below the image */
@@ -641,6 +642,10 @@ header {
   margin-top: 0.5rem;
   font-weight: var(--font-medium);
   text-align: center;
+  padding: 0.5rem;
+  background-color: var(--container-color);
+  width: 100%;
+  border-radius: 0 0 0.25rem 0.25rem; /* Rounded corners on the bottom */
 }
 
 /* Button inside the certification content */
